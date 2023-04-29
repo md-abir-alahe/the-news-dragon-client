@@ -1,5 +1,6 @@
 /* eslint-disable no-unused-vars */
 import React, { useEffect, useState } from 'react';
+import { Link } from 'react-router-dom';
 
 const LeftNav = () => {
 
@@ -8,7 +9,7 @@ const LeftNav = () => {
     useEffect(() => {
         fetch('http://localhost:5000/categories')
             .then(res => res.json())
-            .then(data => console.log(data))
+            .then(data => setCategories(data))
             .catch(error => {
                 console.log(error);
             })
@@ -17,7 +18,16 @@ const LeftNav = () => {
 
     return (
         <div>
-            <h2>Left Nav</h2>
+            <h4>All Category</h4>
+            <div className='ps-4'>
+                {
+                    categories.map(category => <p
+                        key={category.id}
+                    >
+                        <Link className='text-decoration-none text-black' to={`/category/${category.id}`}>{category.name}</Link>
+                    </p>)
+                }
+            </div>
         </div>
     );
 };
