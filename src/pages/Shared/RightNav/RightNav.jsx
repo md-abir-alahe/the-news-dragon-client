@@ -1,6 +1,6 @@
 /* eslint-disable no-unused-vars */
 import React from 'react';
-import { Button, ListGroup } from 'react-bootstrap';
+import { Button, Card, ListGroup } from 'react-bootstrap';
 import { FcGoogle } from 'react-icons/fc';
 import { FaGithub, FaFacebook, FaTwitter, FaInstagram } from 'react-icons/fa';
 import QZone from '../QZone/QZone';
@@ -24,14 +24,16 @@ const RightNav = () => {
             </div>
             <QZone></QZone>
             <div>
-                <div>
-                    <img src={bg} alt="" />
-                    <div>
-                        <h3>Create an Amazing Newspaper</h3>
-                        <p>Discover thousands of options, easy to customize layouts, one-click to import demo and much more.</p>
+                <Card className="bg-dark text-white">
+                    <Card.Img src={bg} alt="Card image" />
+                    <Card.ImgOverlay>
+                        <Card.Title>Create an Amazing Newspaper</Card.Title>
+                        <Card.Text>
+                            Discover thousands of options, easy to customize layouts, one-click to import demo and much more.
+                        </Card.Text>
                         <Button variant="danger">Learn More</Button>
-                    </div>
-                </div>
+                    </Card.ImgOverlay>
+                </Card>
             </div>
         </div>
     );
