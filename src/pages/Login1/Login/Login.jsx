@@ -2,10 +2,12 @@
 import React from 'react';
 import { Button, Container, Form } from 'react-bootstrap';
 import { Link } from 'react-router-dom';
+import gifffff from '../../../assets/Online learning.gif'
 
 const Login = () => {
     return (
         <Container className='mx-auto w-25'>
+            <img src={gifffff} alt="" />
             <h3>Please Login</h3>
             <Form>
                 <Form.Group className="mb-3" controlId="formBasicEmail">
