@@ -34,7 +34,7 @@ const Register = () => {
     return (
         <Container
             className='mx-auto w-25'>
-            <h3>Please Login</h3>
+            <h3>Please Register</h3>
             <Form onSubmit={handleRegister}>
                 <Form.Group className="mb-3" controlId="formBasicEmail">
                     <Form.Label>Name</Form.Label>
@@ -68,7 +68,7 @@ const Register = () => {
                 </Button>
                 <br />
                 <Form.Text className='text-secondary'>
-                    Already have an account <Link to={`/login`}>Login</Link>
+                    Already have an account <Link to={`/login`}>Register</Link>
                 </Form.Text>
                 <Form.Text className='text-success'>
 
